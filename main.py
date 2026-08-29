@@ -1,9 +1,13 @@
+import validators
+from urllib.parse import urlparse
 print("Web Security Header Analyzer 0.1")
 program = True
 while program:
-    user_value = input("Enter the target URL: ")
-    if not (user_value.startswith("http://") or user_value.startswith("https://")):
-        print("Invalid URL! Please enter again")
-    else:
-        print(f"Target: {user_value}")
+    target = input("Enter the target URL: ")
+    parsed_target = urlparse(target)
+    if validators.url(target):
+        print("URL Successful!")
         program = False
+    else:
+        print("Invalid URL. Try again!")
+        

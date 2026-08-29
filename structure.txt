@@ -1,0 +1,37 @@
+==============Version 0.1==================
+User gives URL → tool sends request → tool shows basic response information.
+
+A clean beginner structure would be:
+
+main.py
+Starts the program
+Asks the user for a URL
+Passes that URL to the request logic
+Receives the result
+Sends the result to the output logic
+
+request_handler.py
+Responsible only for making the HTTP request
+Should collect:
+Final URL
+Status code
+Response headers
+Request/connection error if something fails
+
+output.py
+Responsible only for displaying results nicely
+For example:
+Target URL
+Final URL
+Status code
+Headers
+Error message if request failed
+
+README.md
+Project purpose
+Current version: V0.1
+What it currently does
+What you plan to add later
+
+requirements.txt
+External Python packages your project needs

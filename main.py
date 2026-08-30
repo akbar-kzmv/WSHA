@@ -1,6 +1,7 @@
 import validators
 from urllib.parse import urlparse
 from request_handler import send_request
+from output import display_response
 
 print("Web Security Header Analyzer 0.1")
 program = True
@@ -13,6 +14,6 @@ while program:
         print("Invalid URL. Try again!")
 
 response = send_request(target)
-print(f"Status code: {response.status_code}")
+display_response(response, target)
 
     
